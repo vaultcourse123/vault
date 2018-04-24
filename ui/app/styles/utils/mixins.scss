@@ -43,3 +43,19 @@
     margin-bottom: (5/14) + 0rem;
   }
 }
+
+@mixin elevation($name) {
+  @if $name == "low" {
+    box-shadow: $box-shadow-low;
+  } @else if $name == "middle" {
+    box-shadow: $box-shadow-middle;
+    z-index: 300;
+  } @else if $name == "high" {
+    box-shadow: $box-shadow-high;
+    z-index: 400;
+  } @else if $name == "highest" {
+    box-shadow: $box-shadow-highest;
+    z-index: 500;
+  }
+  transition: box-shadow $speed;
+}

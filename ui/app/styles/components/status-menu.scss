@@ -2,19 +2,21 @@
   max-width: 360px;
   min-width: 280px;
   border-radius: 3px;
-  margin: 0 -17px 0 0;
   will-change: transform, opacity;
 
   .card {
     position: relative;
     border-radius: 2px;
-    border: $base-border;
-    box-shadow: 0 0 4px rgba($black, 0.21);
+    box-shadow: $box-shadow, $box-shadow-high;
     color: $black;
-    @include css-top-arrow(8px, $grey-lighter, 1px, $grey, 100%, -25px);
+
     .card-content {
       padding: $size-6 $size-3;
     }
+  }
+
+  .card-header {
+    box-shadow: none;
   }
 
   .card-header-title,
@@ -30,7 +32,6 @@
   }
 
   .replication-card {
-    @include css-top-arrow(8px, $grey-lighter, 1px, $grey, 100%, -98px);
     .box-label {
       box-shadow: none;
     }
@@ -80,7 +81,7 @@
     font-size: $size-6;
     font-weight: 500;
     padding: $size-9 $size-3;
-    border-radius: $menu-item-radius;
+    border-radius: 0;
     color: $menu-item-color;
     display: block;
     padding: $size-9 $size-3;
